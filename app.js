@@ -1,30 +1,30 @@
-const express = require ('express')
-const app = express()
-const os = require('os')
-const hostname = os.hostname()
+const express = require("express");
+const app = express();
+const os = require("os");
+const hostname = os.hostname();
 
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 3300;
 
-console.log(hostname)
+console.log(hostname);
 
-app.use(express.json())
+app.use(express.json());
 
-app.set('view engine', 'ejs')
+app.set("view engine", "ejs");
 
-const CurdController = require('./controllers/curdcontroller')
-app.use('/', CurdController)
+const CurdController = require("./controllers/curdcontroller");
+app.use("/", CurdController);
 
-app.get('/', function(req, res) {
-    res.render('pages/index', {hostname : hostname, title : 'home'})
-})
+app.get("/", function (req, res) {
+  res.render("pages/index", { hostname: hostname, title: "home" });
+});
 
-app.get('/about', function(req, res) {
-    res.render('pages/about', {title: 'about'})
-})
+app.get("/about", function (req, res) {
+  res.render("pages/about", { title: "about" });
+});
 
-console.log(process.env)
-console.log(process.env.DEPLOYMENT_ENV)
+console.log(process.env);
+console.log(process.env.DEPLOYMENT_ENV);
 
-app.listen(port, function() {
-    console.log('server is up on port ' + port)
-})
+app.listen(port, function () {
+  console.log("server is up on port " + port);
+});
