@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node /home/ubuntu/node/app.js"
+    "start": "env-cmd -f ./.env.prod node /home/ubuntu/node/app.js"
   },
   "keywords": [],
   "author": "",

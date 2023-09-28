@@ -3,7 +3,7 @@ const app = express();
 const os = require("os");
 const hostname = os.hostname();
 
-const port = process.env.PORT || 3400;
+const port = process.env.PORT || 3000;
 
 console.log(hostname);
 
