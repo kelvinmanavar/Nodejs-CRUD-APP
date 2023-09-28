@@ -1,5 +1,5 @@
 # add nodejs to yum
-curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+curl -fsSL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 apt-get install -y Node.js
 # install pm2 module globaly
 npm install -g pm2
