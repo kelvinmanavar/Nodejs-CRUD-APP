@@ -1,11 +1,9 @@
 # add nodejs to yum
-curl -sL https://rpm.nodesource.com/setup_lts.x | bash -
-yum install nodejs -y #default-jre ImageMagick
-yum install npm  -y
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
+apt-get install -y Node.js
 # install pm2 module globaly
 npm install -g pm2
-pm2 update
 
 # delete existing bundle
-cd /home/ec2-user
+cd /home/ubuntu
 rm -rf node

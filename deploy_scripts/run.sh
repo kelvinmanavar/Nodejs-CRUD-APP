@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
-cd /home/ec2-user/node
-pm2 start
+cd /home/ubuntu/node
+npm install
+npm start
