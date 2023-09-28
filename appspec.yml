@@ -17,7 +17,7 @@ hooks:
       runas: root
   ApplicationStart:
     - location: deploy_scripts/run.sh
-      timeout: 300
+      timeout: 500
       runas: ubuntu
   ValidateService:
     - location: deploy_scripts/validate.sh
